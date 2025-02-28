@@ -1,4 +1,4 @@
-package task1.utils;
+package task3.utils;
 
 import java.util.LinkedHashSet;
 import java.util.Random;
