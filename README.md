@@ -1,17 +1,19 @@
-# Task1
+# Reporting Portal API
 ## Description
-The task consists of 4 tests mentioned below.
+The task includes only one test (ReportingPortalTest) which checks whether different actions (project creation, test uploading etc.) work properly.
 
-### 1. LoginTest
-Checks whether transitions between cards work properly in case everything is entered correctly.
-### 2. AcceptCookiesTest
-Checks whether huge red banner disappers after pressing "Not really, no".
-### 3. HideHelpFormTest
-Checks whether help form in the bottom right corner disappears after pressing "Send to bottom".
-### 4. TimerTest
-Checks whether timer always starts at 00:00:00.
+## Files, required for the test
+Add user_data.json (demo\src\test\resources\user_data.json)
 
-## Running all tests one after another
+user_data.json has to look this way:
+```json
+{
+    "login": "<your login>",
+    "password": "<your password>"
+}
+```
+
+## Running test
 1. Download java (https://www.oracle.com/cis/java/technologies/downloads/)
 2. Download maven (https://maven.apache.org/download.cgi)
 3. Clone this repo
@@ -19,14 +21,4 @@ Checks whether timer always starts at 00:00:00.
 5. run this:
 ```bash
 mvn test
-```
-
-## Running one test
-1. Download java (https://www.oracle.com/cis/java/technologies/downloads/)
-2. Download maven (https://maven.apache.org/download.cgi)
-3. Clone this repo
-4. Go to the directory of cloned repo (*/demo)
-5. run this:
-```bash
-mvn -Dtest=<ClassName> test
 ```

@@ -1,0 +1,7 @@
+{
+    "webUrl": "http://%s:%s@localhost:%d/web",
+    "apiBaseUri": "http://localhost:%d/api",
+    "variant": 2,
+    "port": 8080,
+    "projectName": "Project "
+}

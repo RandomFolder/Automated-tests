@@ -1,5 +1,5 @@
 {
-  "browserName" : "firefox",
+  "browserName" : "chrome",
   "isRemote": false,
   "remoteConnectionUrl": "http://localhost:4444/wd/hub",
   "isElementHighlightEnabled" : true,
@@ -9,18 +9,20 @@
       "capabilities": {
       },
       "options": {
+        "browser.download.useDownloadDir": true,
+        "browser.helperApps.neverAsk.saveToDisk": "application/octet-stream, application/x-debian-package, application/x-www-form-urlencod, application/json, application/x-compressed, application/x-zip-compressed, application/zip, multipart/x-zip, text/plain, text/csv, image/png, image/jpeg",
         "intl.accept_languages": "en",
-        "safebrowsing.enabled": "true",
+        "safebrowsing.enabled": "false",
         "profile.default_content_settings.popups": "0",
         "disable-popup-blocking": "true",
-        "download.prompt_for_download": "false",
+        "download.prompt_for_download": "true",
         "download.default_directory": "./downloads"
       },
       "loggingPreferences": {
         "Performance": "All"
       },
       "pageLoadStrategy": "Normal",
-      "startArguments": ["--disable-search-engine-choice-screen"],
+      "startArguments": ["--disable-search-engine-choice-screen", "--ignore-ssl-errors=yes", "--ignore-certificate-errors"],
       "excludedArguments": []
     },
     "edge": {
@@ -28,10 +30,10 @@
       },
       "options": {
         "intl.accept_languages": "en",
-        "safebrowsing.enabled": "true",
+        "safebrowsing.enabled": "false",
         "profile.default_content_settings.popups": "0",
         "disable-popup-blocking": "true",
-        "download.prompt_for_download": "false",
+        "download.prompt_for_download": "true",
         "download.default_directory": "./downloads"
       },
       "loggingPreferences": {
@@ -47,7 +49,7 @@
         "intl.accept_languages": "en",
         "browser.download.dir": "./downloads",
         "browser.download.folderList": 2,
-        "browser.helperApps.neverAsk.saveToDisk": "application/octet-stream, application/x-debian-package, application/x-www-form-urlencod, application/json, application/x-compressed, application/x-zip-compressed, application/zip, multipart/x-zip, text/plain, text/csv, image/png",
+        "browser.helperApps.neverAsk.saveToDisk": "application/octet-stream, application/x-debian-package, application/x-www-form-urlencod, application/json, application/x-compressed, application/x-zip-compressed, application/zip, multipart/x-zip, text/plain, text/csv, image/png, image/jpeg",
         "browser.helperApps.alwaysAsk.force": false,
         "browser.download.manager.alertOnEXEOpen": false,
         "browser.download.manager.focusWhenStarting": false,
@@ -58,7 +60,7 @@
         "browser.download.manager.useWindow": false,
         "browser.download.panel.shown": false
       },
-      "startArguments": []
+      "startArguments": ["--lang=en"]
     },
     "iexplorer": {
       "capabilities": {
@@ -102,9 +104,9 @@
   },
   "timeouts": {
     "timeoutImplicit" : 0,
-    "timeoutCondition" : 5,
-    "timeoutScript" : 10,
-    "timeoutPageLoad" : 5,
+    "timeoutCondition" : 10,
+    "timeoutScript" : 5,
+    "timeoutPageLoad" : 10,
     "timeoutPollingInterval": 300,
     "timeoutCommand":120
   },

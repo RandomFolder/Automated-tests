@@ -3,3 +3,5 @@
 **/target
 **/*.log
 **/downloads
+**/*.txt
+**/user_data.json
