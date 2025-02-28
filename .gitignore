@@ -3,3 +3,5 @@
 **/target
 **/*.log
 **/downloads
+**/*.txt
+**/db_connection_data.json
